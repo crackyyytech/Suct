@@ -1,0 +1,58 @@
+{
+  "entities": {
+    "StudentProfile": {
+      "title": "Student Profile",
+      "description": "Represents a student user's profile information.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The full name of the student."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The student's email address, used for login."
+        },
+        "studentId": {
+          "type": "string",
+          "description": "The unique student identifier."
+        },
+        "class": {
+          "type": "string",
+          "description": "The class or grade the student is in."
+        },
+        "overallProgress": {
+          "type": "number",
+          "description": "The student's overall course progress percentage."
+        },
+        "lastActive": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The last time the student was active."
+        },
+        "avatarUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL for the student's avatar image."
+        },
+        "avatarHint": {
+          "type": "string",
+          "description": "AI hint for the avatar image."
+        }
+      },
+      "required": ["name", "email", "studentId", "class"]
+    }
+  },
+  "auth": {
+    "providers": ["email"]
+  },
+  "firestore": {
+    "/students/{studentId}": {
+      "schema": {
+        "$ref": "#/backend/entities/StudentProfile"
+      },
+      "description": "Stores profile information for each student user. The document ID is the student's auth UID."
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "Default user avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1521146764736-56c929d59c83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxwZXJzb24lMjBmYWNlfGVufDB8fHx8MTc2ODk2NTIyOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person face"
+    },
+    {
+      "id": "ai-avatar",
+      "description": "AI Tutor avatar",
+      "imageUrl": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxyb2JvdCUyMGZhY2V8ZW58MHx8fHwxNzY5MDk2OTMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot face"
+    },
+    {
+      "id": "student-avatar-1",
+      "description": "Avatar for student 1",
+      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "male student"
+    },
+    {
+      "id": "student-avatar-2",
+      "description": "Avatar for student 2",
+      "imageUrl": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-3",
+      "description": "Avatar for student 3",
+      "imageUrl": "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=1899&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "male student"
+    },
+    {
+      "id": "student-avatar-4",
+      "description": "Avatar for student 4",
+      "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-5",
+      "description": "Avatar for student 5",
+      "imageUrl": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-6",
+      "description": "Avatar for student 6",
+      "imageUrl": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "male student"
+    },
+    {
+      "id": "student-avatar-7",
+      "description": "Avatar for student 7",
+      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=1961&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-8",
+      "description": "Avatar for student 8",
+      "imageUrl": "https://images.unsplash.com/photo-1554151228-14d9def656e4?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-9",
+      "description": "Avatar for student 9",
+      "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "male student"
+    },
+    {
+      "id": "student-avatar-10",
+      "description": "Avatar for student 10",
+      "imageUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "student-avatar-11",
+      "description": "Avatar for student 11",
+      "imageUrl": "https://images.unsplash.com/photo-1521119989659-a83eee488004?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "male student"
+    },
+    {
+      "id": "student-avatar-12",
+      "description": "Avatar for student 12",
+      "imageUrl": "https://images.unsplash.com/photo-1542206395-9feb3edaa68d?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "female student"
+    },
+    {
+      "id": "teacher-course-science",
+      "description": "Teacher dashboard course card for Science",
+      "imageUrl": "https://images.unsplash.com/photo-1576788476424-78d14187684f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2OTAxODU1MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "science classroom"
+    },
+    {
+      "id": "teacher-course-mathematics",
+      "description": "Teacher dashboard course card for Math",
+      "imageUrl": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtYXRoJTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2OTAxODU4MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "math classroom"
+    },
+    {
+      "id": "teacher-course-history",
+      "description": "Teacher dashboard course card for History",
+      "imageUrl": "https://images.unsplash.com/photo-1517488629431-1a265e0ce383?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxoaXN0b3J5JTIwY2xhc3Nyb29tfGVufDB8fHx8MTc2OTAxODYwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "history classroom"
+    },
+    {
+      "id": "teacher-course-english",
+      "description": "Course card for English",
+      "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbmdsaXNoJTIwYm9va3N8ZW58MHx8fHwxNzA4NTIzNjQyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "english books"
+    },
+    {
+      "id": "teacher-course-evs",
+      "description": "Course card for EVS",
+      "imageUrl": "https://images.unsplash.com/photo-1421788662528-addc2b3827f7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlbnZpcm9ubWVudCUyMG5hdHVyZXxlbnwwfHx8fDE3MDg1MjM2NzZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "environment nature"
+    },
+    {
+      "id": "teacher-course-tamil",
+      "description": "Course card for Tamil",
+      "imageUrl": "https://images.unsplash.com/photo-1621935641773-a647d6a55a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx0YW1pbCUyMGN1bHR1cmV8ZW58MHx8fHwxNzA4NTIzNzEwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tamil culture"
+    }
+  ]
+}

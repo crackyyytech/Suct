@@ -1,0 +1,145 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function getUserRole() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated() && getUserRole() == 'admin';
+    }
+    
+    function isTeacher() {
+      return isAuthenticated() && getUserRole() == 'teacher';
+    }
+    
+    function isStudent() {
+      return isAuthenticated() && getUserRole() == 'student';
+    }
+    
+    function isParent() {
+      return isAuthenticated() && getUserRole() == 'parent';
+    }
+    
+    function isApprovedTeacher() {
+      return isTeacher() && get(/databases/$(database)/documents/users/$(request.auth.uid)).data.teacherProfile.isApproved == true;
+    }
+    
+    function isOwnerOrAdmin(userId) {
+      return isAuthenticated() && (request.auth.uid == userId || isAdmin());
+    }
+    
+    function isParentOfStudent(studentId) {
+      return isParent() && 
+        studentId in get(/databases/$(database)/documents/users/$(request.auth.uid)).data.parentProfile.children;
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isOwnerOrAdmin(userId) || 
+                     (isTeacher() && get(/databases/$(database)/documents/users/$(userId)).data.role == 'student') ||
+                     (isParent() && isParentOfStudent(userId));
+      allow create: if isAuthenticated() && request.auth.uid == userId;
+      allow update: if isOwnerOrAdmin(userId) || 
+                       (isAdmin() && resource.data.role == 'teacher'); // Admin can approve teachers
+      allow delete: if isAdmin();
+    }
+
+    // Syllabus - Read for all authenticated, Write for admin only
+    match /syllabus/{classId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+      
+      match /subjects/{subjectId} {
+        allow read: if isAuthenticated();
+        allow write: if isAdmin();
+        
+        match /units/{unitId} {
+          allow read: if isAuthenticated();
+          allow write: if isAdmin();
+          
+          match /lessons/{lessonId} {
+            allow read: if isAuthenticated();
+            allow write: if isAdmin();
+            
+            match /topics/{topicId} {
+              allow read: if isAuthenticated();
+              allow write: if isAdmin();
+            }
+          }
+        }
+      }
+    }
+
+    // Videos - Read for all authenticated, Write for admin only
+    match /videos/{videoId} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Student Progress - Students can read/write their own, Teachers can read their students', Parents can read their children's
+    match /student_progress/{studentId} {
+      allow read, write: if isOwnerOrAdmin(studentId) || 
+                            (isTeacher() && get(/databases/$(database)/documents/users/$(studentId)).data.role == 'student') ||
+                            (isParent() && isParentOfStudent(studentId));
+      
+      match /topics/{topicId} {
+        allow read, write: if isOwnerOrAdmin(studentId) || 
+                              (isTeacher() && get(/databases/$(database)/documents/users/$(studentId)).data.role == 'student') ||
+                              (isParent() && isParentOfStudent(studentId));
+      }
+      
+      match /videos/{videoId} {
+        allow read, write: if isOwnerOrAdmin(studentId) || 
+                              (isTeacher() && get(/databases/$(database)/documents/users/$(studentId)).data.role == 'student') ||
+                              (isParent() && isParentOfStudent(studentId));
+      }
+    }
+
+    // AI Interactions - Users can read/write their own, Admin can read all
+    match /ai_interactions/{interactionId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == resource.data.userId;
+      allow read: if isAdmin();
+      allow create: if isAuthenticated() && request.auth.uid == request.resource.data.userId;
+    }
+
+    // Assignments - Teachers can CRUD their own, Students can read assigned to them
+    match /assignments/{assignmentId} {
+      allow read: if isAuthenticated() && 
+                     (request.auth.uid == resource.data.teacherId || 
+                      request.auth.uid in resource.data.assignedStudents ||
+                      isAdmin());
+      allow create: if isApprovedTeacher() && request.auth.uid == request.resource.data.teacherId;
+      allow update: if isAuthenticated() && 
+                       (request.auth.uid == resource.data.teacherId || 
+                        request.auth.uid in resource.data.assignedStudents ||
+                        isAdmin());
+      allow delete: if isAuthenticated() && 
+                       (request.auth.uid == resource.data.teacherId || isAdmin());
+    }
+
+    // Analytics - Admin only
+    match /analytics/{document=**} {
+      allow read, write: if isAdmin();
+    }
+
+    // App Config - Admin only write, all authenticated read
+    match /app_config/{document=**} {
+      allow read: if isAuthenticated();
+      allow write: if isAdmin();
+    }
+
+    // Rate limiting for AI interactions
+    match /rate_limits/{userId} {
+      allow read, write: if isAuthenticated() && request.auth.uid == userId;
+    }
+  }
+}
