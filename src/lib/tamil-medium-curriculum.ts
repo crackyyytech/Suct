@@ -64,25 +64,26 @@ export const class1TamilCurriculum: TamilSubject[] = [
   }
 ];
 
-  {
-    subjectName: 'கணக்கு',
-    subjectCode: 'MATH-1',
-    chapters: [
-      {
-        chapterNumber: 1,
-        chapterTitle: 'எண்கள் 1 முதல் 10 வரை',
-        topics: [
-          {
-            topic: 'எண்களை அறிதல்',
-            subtopics: ['1 முதல் 5 வரை', '6 முதல் 10 வரை', 'எண்களை எழுதுதல்']
-          },
-          {
-            topic: 'எண்ணுதல்',
-            subtopics: ['பொருட்களை எண்ணுதல்', 'விரல்களால் எண்ணுதல்']
-          }
-        ],
-        learningOutcomes: ['1 முதல் 10 வரை எண்களை அறிதல்', 'பொருட்களை எண்ணுதல்']
-      },
+{
+  subjectName: 'கணக்கு',
+  subjectCode: 'MATH-1',
+  chapters: [
+    {
+      chapterNumber: 1,
+      chapterTitle: 'எண்கள் 1 முதல் 10 வரை',
+      topics: [
+        {
+          topic: 'எண்களை அறிதல்',
+          subtopics: ['1 முதல் 5 வரை', '6 முதல் 10 வரை', 'எண்களை எழுதுதல்']
+        },
+        {
+          topic: 'எண்ணுதல்',
+          subtopics: ['பொருட்களை எண்ணுதல்', 'விரல்களால் எண்ணுதல்']
+        }
+      ],
+      learningOutcomes: ['1 முதல் 10 வரை எண்களை அறிதல்', 'பொருட்களை எண்ணுதல்']
+    },
+
       {
         chapterNumber: 2,
         chapterTitle: 'கூட்டல்',
