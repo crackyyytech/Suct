@@ -1,6 +1,9 @@
 // Tamil Medium Curriculum - Complete Subject and Topic Structure
 // Classes 1-12 with detailed chapter topics
 
+// Tamil Medium Curriculum - Complete Subject and Topic Structure
+// Classes 1-12 with detailed chapter topics
+
 export interface TamilChapterTopic {
   topic: string;
   subtopics: string[];
@@ -24,7 +27,8 @@ export interface TamilClassCurriculum {
   subjects: TamilSubject[];
 }
 
-// Class 1 Tamil Medium Curriculum
+// ======================= CLASS 1 =======================
+
 export const class1TamilCurriculum: TamilSubject[] = [
   {
     subjectName: 'தமிழ்',
@@ -61,29 +65,27 @@ export const class1TamilCurriculum: TamilSubject[] = [
         learningOutcomes: ['மெய் எழுத்துக்களை அறிதல்', 'எளிய சொற்களை வாசித்தல்']
       }
     ]
-  }
-];
+  },
 
-{
-  subjectName: 'கணக்கு',
-  subjectCode: 'MATH-1',
-  chapters: [
-    {
-      chapterNumber: 1,
-      chapterTitle: 'எண்கள் 1 முதல் 10 வரை',
-      topics: [
-        {
-          topic: 'எண்களை அறிதல்',
-          subtopics: ['1 முதல் 5 வரை', '6 முதல் 10 வரை', 'எண்களை எழுதுதல்']
-        },
-        {
-          topic: 'எண்ணுதல்',
-          subtopics: ['பொருட்களை எண்ணுதல்', 'விரல்களால் எண்ணுதல்']
-        }
-      ],
-      learningOutcomes: ['1 முதல் 10 வரை எண்களை அறிதல்', 'பொருட்களை எண்ணுதல்']
-    },
-
+  {
+    subjectName: 'கணக்கு',
+    subjectCode: 'MATH-1',
+    chapters: [
+      {
+        chapterNumber: 1,
+        chapterTitle: 'எண்கள் 1 முதல் 10 வரை',
+        topics: [
+          {
+            topic: 'எண்களை அறிதல்',
+            subtopics: ['1 முதல் 5 வரை', '6 முதல் 10 வரை', 'எண்களை எழுதுதல்']
+          },
+          {
+            topic: 'எண்ணுதல்',
+            subtopics: ['பொருட்களை எண்ணுதல்', 'விரல்களால் எண்ணுதல்']
+          }
+        ],
+        learningOutcomes: ['1 முதல் 10 வரை எண்களை அறிதல்', 'பொருட்களை எண்ணுதல்']
+      },
       {
         chapterNumber: 2,
         chapterTitle: 'கூட்டல்',
@@ -97,6 +99,7 @@ export const class1TamilCurriculum: TamilSubject[] = [
       }
     ]
   },
+
   {
     subjectName: 'சூழ்நிலையியல்',
     subjectCode: 'EVS-1',
@@ -130,6 +133,9 @@ export const class1TamilCurriculum: TamilSubject[] = [
     ]
   }
 ];
+
+// ======================= REST OF FILE =======================
+
 
 // Class 2 Tamil Medium Curriculum
 export const class2TamilCurriculum: TamilSubject[] = [
